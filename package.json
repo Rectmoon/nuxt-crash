@@ -9,12 +9,14 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "generate:start": "node app.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "config": {
     "nuxt": {
       "host": "127.0.0.1",
-      "port": 8080
+      "port": 8080,
+      "base": "/web/"
     }
   },
   "dependencies": {

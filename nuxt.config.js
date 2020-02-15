@@ -1,12 +1,17 @@
 import webpack from 'webpack'
-import { name, version } from './package.json'
+import { name, version, config } from './package.json'
+
+const {
+  nuxt: { base }
+} = config
 
 export default {
   // mode: 'universal',
   mode: 'spa',
 
   router: {
-    mode: 'hash'
+    mode: 'hash',
+    base
   },
 
   /*
@@ -56,6 +61,10 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  generate: {
+    dir: `.${base}`
+  },
   /*
    ** Build configuration
    */
