@@ -69,9 +69,6 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     filenames: {
       app: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash:6].js'),
       chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash:6].js'),
@@ -85,7 +82,9 @@ export default {
         'process.VERSION': version
       })
     ],
-
+    /*
+     ** You can extend webpack config here
+     */
     extend(config, { loaders }) {}
   }
 }

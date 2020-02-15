@@ -6,12 +6,11 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { getUserInfo } from '@/api/test'
 
 export default {
-  async asyncData() {
-    const { data } = await axios.get('https://api.myjson.com/bins/1cni7s')
-    return { remoteData: data }
+  async asyncData({ $axios }) {
+    return { remoteData: await getUserInfo() }
   },
   data() {
     return { message: 'hello' }
