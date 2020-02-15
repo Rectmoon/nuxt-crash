@@ -2,7 +2,13 @@ import webpack from 'webpack'
 import { name, version } from './package.json'
 
 export default {
-  mode: 'universal',
+  // mode: 'universal',
+  mode: 'spa',
+
+  router: {
+    mode: 'hash'
+  },
+
   /*
    ** Headers of the page
    */
